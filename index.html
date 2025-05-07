@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Navbar</title>
+  <link rel="stylesheet" href="flower.css">
+
+  <link rel="stylesheet" href="../src/output.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<style>
+  
+  .jilu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    transition: box-shadow 0.3s ease;
+    
+  }
+
+
+
+</style>
+
+<body class="bg-gray-200">
+
+  <header class="flex justify-between items-center p-4 bg-gray-200 relative jilu  shadow-lg shadow-black/10  ">
+    <!-- Logo -->
+    <div>
+      <a href="#"><img src="../public/images/flower1.png" alt="Flower logo" class="h-10"></a>
+    </div>
+
+    <!-- Navigation Links -->
+    <div id="nav-links" class="hidden  lg:flex flex-col lg:flex-row lg:static absolute top-[75px] right-0  min-h-[100vh] lg:min-h-fit w-[70%] lg:w-auto bg-[url(../public/images/flower-15.png)] bg-gray-200 duration-1000 lg:bg-gray-200 px-5 py-4 lg:py-0 lg:gap-12 gap-4 items-center">
+      <nav class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center lg:items-center text-lg">
+        <a href="#" class="text-blue-900 font-semibold">Home</a>
+        <a href="#" class="text-gray-800">About</a>
+        <a href="#" class="text-gray-800">Workshop</a>
+        <a href="#" class="text-gray-800">Shop</a>
+        <a href="#" class="text-gray-800">Contact Us</a>
+      </nav>
+    </div>
+
+    <!-- CTA Button -->
+    <div class="hidden lg:flex">
+      <button class="px-4 py-2 bg-blue-900 text-white rounded">Shop Now</button>
+    </div>
+
+    <!-- Hamburger Icon -->
+    <div class="lg:hidden flex items-center text-3xl cursor-pointer duration-1000">
+      <i class="bi bi-list" id="menu-icon" onclick="toggleMenu()"></i>
+    </div>
+  </header>
+  <main class="bg-gray-200">
+    <div >
+    
+        <div class="flex flex-col md:flex-row gap-10 px-6 pt-[50px] pb-12 max-w-7xl mt-16 mx-auto lg:px-8 ">
+          <div class="flex flex-col gap-8 flex-1">
+            <h2 class="text-[55px] text-indigo-900 font-semibold">Send love with Flower Shop</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at elit nibh. Class aptent taciti sociosqu.</p>
+            <button class="bg-indigo-900 text-xl text-white py-3 px-8 w-fit hover:bg-white hover:text-indigo-900 duration-1000">Explore our offer</button>
+          </div>
+          <div class="flex-1">
+             <img src="../public/images/flower-2.png" class="object-cover h-full w-full ">
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row gap-10 px-6 pt-10 pb-12 max-w-7xl mt-16 mx-auto lg:px-8  ">
+          <div class=" flex-1 flex flex-row relative ">
+               <img src="../public/images/flower-3.png" class=" absolute -left-4 md:-left-10 -top-5 z-10 object-cover h-full  w-full">
+               <img src="../public/images/floewr-5.jpg" class=" object-cover h-full w-full">
+          </div>
+          <div class="flex-1 flex flex-col gap-4 justify-center items-center  ">
+            <h2 class="text-[55px] font-semibold text-indigo-900">About Flower Shop</h2>
+            <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at elit nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+            <p>Curabitur auctor velit non urna semper lacinia. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla ut pellentesque ante, vitae blandit dui. </p>
+
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row gap-10 px-6 pt-10 pb-12 max-w-7xl mt-16 mx-auto lg:px-8">
+          <div class="flex flex-col gap-7">
+            <h2 class="text-[55px] font-semibold text-indigo-900 text-center">Customers’ favorites</h2>
+            <div class="flex flex-col md:flex-row gap-10 h-fit">
+              <div  class="flex flex-col gap-8">
+                              <div class="relative">
+                                  <img src="../public/images/flower-6.jpg" class="object-cover h-full w-full">
+                                  <p class="bg-indigo-900 py-4 px-8 wifit text-lg text-white font-semibold absolute top-0 right-0">$80</p>
+                                  </div>
+                <div class="flex flex-col justify-center items-center gap-4">
+                  <p class="text-[22px] text-indigo-900">Summer Bouquet</p>
+                  <button class="text-[26px] text-indigo-900 font-medium p-4 hover:border-2 hover:border-indigo-900">BUY NOW <span class="bi bi-arrow-right"></span></button>
+                </div>
+              </div>
+              <div  class="flex flex-col gap-8">
+                <div class="relative">
+                  <img src="../public/images/flower-7.jpg" class="object-cover h-full w-full">
+                  <p class="bg-indigo-900 py-4 px-8 wifit text-lg text-white font-semibold absolute top-0 right-0">$80</p>
+                  </div>
+                <div class="flex flex-col justify-center items-center gap-4">
+                  <p class="text-[22px] text-indigo-900">Summer Bouquet</p>
+                  <button class="text-[26px] text-indigo-900 font-medium p-4 hover:border-2 hover:border-indigo-900">BUY NOW <span class="bi bi-arrow-right"></span></button>
+                </div>
+              </div>   
+              <div  class="flex flex-col gap-8">
+                <div class="relative">
+                  <img src="../public/images/flower-6.jpg" class="h-full object-cover w-full">
+                  <p class="bg-indigo-900 py-4 wifit text-lg text-white font-semibold absolute top-0 right-0 px-8">$80</p>
+                  </div>
+                <div class="flex flex-col justify-center items-center gap-4">
+                  <p class="text-[22px] text-indigo-900">Summer Bouquet</p>
+                  <button class="text-[26px] text-indigo-900 font-medium p-4 hover:border-2 hover:border-indigo-900">BUY NOW <span class="bi bi-arrow-right"></span></button>
+                </div>
+              </div>
+            </div>
+            
+              <div class="flex justify-center items-center">
+                <button class=" mt-10 border-2 border-indigo-900 w-fit text-indigo-900 hover:bg-indigo-900 px-16 py-4 text-lg hover:text-white hover:font-medium">Explore our offer</button>
+              </div>
+           
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row gap-16 md:gap-10 px-6 pt-10 pb-12 max-w-7xl mt-16 mx-auto lg:px-8">
+                    <div class="flex flex-col gap-8  flex-1">
+                      <p class="text-2xl font-medium text-indigo-900">This month in our workshop:</p>
+                      <h2 class="text-[55px] font-semibold text-indigo-900">Flower box</h2>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at elit nibh. Class aptent taciti sociosqu ad litora torquent.</p>
+                        <h1 class="text-3xl font-bold text-indigo-900">
+                          January 20th, 06:00 pm</h1>
+                          <button class="w-fit bg-indigo-900 p-5 text-xl text-white hover:bg-white hover:text-indigo-900 duration-500">Book for $30</button>
+                    </div>
+                    <div class=" flex-1 flex flex-row relative ">
+                      <img src="../public/images/floer-9.png" class=" absolute -right-3 -top-4 md:-right-10 md:-top-7 z-10 object-cover h-full  w-full">
+                      <img src="../public/images/flower-10.jpg" class=" object-cover h-full w-full">
+                    </div>
+
+        </div>
+        <div class="flex flex-col  gap-10 px-6 pt-10 pb-12 max-w-7xl mt-16 mx-auto lg:px-8">
+                 <h2 class="text-[55px] font-semibold  text-indigo-900">Upcoming workshops:</h2>
+                 <div class="grid grid-cols-2 md:grid-cols-4 gap-10 ">
+                  <div class="flex flex-col gap-4  items-center">
+                   <div class="border border-slate-100  overflow-hidden">
+                    <img src="../public/images/flower-13.jpg" class="object-cover h-full w-full hover:scale-110 transition-transform duration-1000"> 
+                   </div>
+                    <p class="text-xl font-medium text-slate-700 ">Wreath workshop</p>
+                  </div>
+                  <div class="flex flex-col gap-4 items-center">
+                    <div class="border border-slate-100  overflow-hidden">
+                      <img src="../public/images/flower-11.jpg" class="object-cover h-full w-full hover:scale-110 transition-transform duration-1000"> 
+                     </div>
+                    <p class="text-xl font-medium text-slate-700">Basic floral workshop</p>
+                  </div>
+                  <div class="flex flex-col gap-4 items-center ">
+                    <div class="border border-slate-100  overflow-hidden">
+                      <img src="../public/images/flower-12.jpg" class="size-cover h-full w-full hover:scale-110 transition-transform duration-1000"> 
+                     </div>
+                    <p class="text-xl font-medium text-slate-700">Bouquet workshop</p>
+                  </div>
+                  <div class="flex flex-col gap-4 items-center">
+                    <div class="border border-slate-100 overflow-hidden">
+                      <img src="../public/images/flower-13.jpg" class="size-cover h-full w-full hover:scale-110 transition-transform duration-1000"> 
+                     </div>
+                    <p class="text-xl font-medium text-slate-700">Terrarium workshop</p>
+                  </div>
+                 </div>
+                <div class="flex items-center justify-center">
+                  <button class="text-xl text-white font-medium  p-5 bg-indigo-900 hover:bg-white w-fit hover:text-indigo-900">Explore workshops</button>
+                </div>
+        </div>
+        <div class="flex flex-col md:flex-row pt-10 mt-16 pb-12">
+      <div class="flex flex-col md:flex-row h-full">
+        <div class="relative group items-center justify-center overflow-hidden cursor-pointer h-[500px] flex-1 backdrop-brightness-75">
+          <div>
+            <img src="../public/images/Screenshot 2025-05-05 205640.png" class="object-cover h-full w-full group-hover:opacity-95 group-hover:blur-sm group-hover:rotate-3 group-hover:scale-125 transition-transform">
+          </div>
+         
+          <div class="flex flex-col gap-5 absolute inset-0 items-center justify-center px-9 text-center translate-y-[60%] md:translate-y-[68%] group-hover:translate-y-5 transition-all ">
+            <h2 class="md:text-5xl text-3xl font-semibold text-center text-white">Home Plants </h2>
+            <p class=" md:text-xl text-lg text-white "> Be the first to know about exclusive discounts, and news discounts, workshops.</p>
+            <button class="p-3 hover:bg-white hover:text-indigo-900 rounded-md bg-indigo-900 text-lg font-semibold text-white">Veiw More</button>
+            
+          </div>
+        </div>
+        <div class="relative group items-center justify-center overflow-hidden cursor-pointer h-[500px]  flex-1">
+          <div>
+            <img src="../public/images/Screenshot 2025-05-05 205454.png" class="object-cover h-full w-full group-hover:opacity-95 group-hover:blur-sm group-hover:rotate-3 group-hover:scale-125 transition-transform">
+          </div>
+          <div class="flex flex-col gap-5 absolute inset-0 items-center justify-center px-9 text-center translate-y-[60%] md:translate-y-[68%] group-hover:translate-y-5 transition-all ">
+            <h2 class="md:text-5xl text-3xl font-semibold text-center text-white">Home Plants </h2>
+            <p class=" md:text-xl text-lg text-white "> Be the first to know about exclusive discounts, and news discounts, workshops.</p>
+            <button class="p-3 hover:bg-white hover:text-indigo-900 rounded-md bg-indigo-900 text-lg font-semibold text-white">Veiw More</button>
+            
+          </div>
+         
+        </div>
+        <div class="relative group items-center justify-center overflow-hidden cursor-pointer h-[500px]  flex-1">
+          <div>
+            <img src="../public/images/Screenshot 2025-05-05 205604.png" class="object-cover h-full w-full  group-hover:opacity-95 group-hover:blur-sm group-hover:rotate-3 group-hover:scale-125 transition-transform">
+          </div>
+          <div class="flex flex-col gap-5 absolute inset-0 items-center justify-center px-9 text-center translate-y-[60%] md:translate-y-[68%] group-hover:translate-y-5 transition-all ">
+            <h2 class="md:text-5xl text-3xl font-semibold text-center text-white">Home Plants </h2>
+            <p class=" md:text-xl text-lg text-white "> Be the first to know about exclusive discounts, and news discounts, workshops.</p>
+            <button class="p-3 hover:bg-white hover:text-indigo-900 rounded-md bg-indigo-900 text-lg font-semibold text-white">Veiw More</button>
+            
+          </div>
+        </div>
+        <div class="relative group items-center justify-center overflow-hidden cursor-pointer h-[500px]  flex-1">
+          <div>
+            <img src="../public/images/Screenshot 2025-05-05 205620.png" class="object-cover h-full w-full  group-hover:opacity-95 group-hover:blur-sm group-hover:rotate-3 group-hover:scale-125 transition-transform">
+          </div>
+          <div class="flex flex-col gap-5 absolute inset-0 items-center justify-center px-9 text-center translate-y-[60%] md:translate-y-[68%] group-hover:translate-y-5 transition-all ">
+            <h2 class="md:text-5xl text-3xl font-semibold text-center text-white">Home Plants </h2>
+            <p class=" md:text-xl text-lg text-white "> Be the first to know about exclusive discounts, and news discounts, workshops.</p>
+            <button class="p-3 hover:bg-white hover:text-indigo-900 rounded-md bg-indigo-900 text-lg font-semibold text-white">Veiw More</button>
+            
+          </div>
+        </div>
+    
+      </div>
+        </div>
+        <div class="flex flex-col md:flex-row gap-10 px-6 pt-10 pb-12 max-w-7xl mt-16 mx-auto lg:px-8">
+             <div class="flex flex-col gap-10">
+              <h2 class="  text-3xl md:text-5xl lg:text-6xl  font-semibold text-indigo-900 text-center ">Do you want to order flower arrangement for special occasion </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 mt-20 pt-10 gap-6">
+              <!-- _____________________map / Flowers_________________ -->
+              <div class="flex flex-col gap-4">
+                <!-- Toggle Buttons -->
+                <div class="flex flex-row gap-2">
+                  <button onclick="showMap()" id="mapBtn" class="bg-indigo-900 py-3 px-6 text-xl font-semibold text-white rounded">Map</button>
+                  <button onclick="showFlower()" id="flowerBtn" class="bg-white py-3 px-6 text-xl font-semibold text-black border border-gray-300 rounded">Flower</button>
+                </div>
+            
+                <!-- Content Section -->
+                <div class="w-full h-[550px] overflow-hidden ">
+                  <!-- Map -->
+                  
+                  <iframe  id="mapSection" class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3544.377865751993!2d86.04856137502588!3d20.836562680765155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19459fb2f58025%3A0x7bf4daac26c47803!2sRameswar%20Temple%20(Godipatia)!5e1!3m2!1sen!2sin!4v1746625642960!5m2!1sen!2sin"  style="border:0;" allowfullscreen="" loading="lazy" ></iframe>
+                  <!-- Flower Image (initially hidden) -->
+                  <img id="flowerSection" src="../public/images/flower-17.jpg" class="w-full h-full object-cover hidden" alt="Flower">
+                </div>
+              </div>
+
+              <!-- _______________________cotact__________________ -->
+              <div class="flex flex-col gap-10">
+                <h2 class="text-indigo-900 text-3xl text-center font-semibold ">Contact us</h2>
+                <div class="grid grid-cols-1 gap-4  md:grid-cols-2 w-full">
+                  <input type="text" placeholder="First Name"            class=" p-5">
+                  <input type="text" placeholder="Last Name"             class=" p-5">
+                  <input type="text" placeholder="Email"                 class=" p-5">
+                  <input type="text" placeholder="Phonenumber"           class=" p-5">
+                </div>
+                <div class="flex flex-col gap-4">
+                   <textarea class="w-full" rows="9"></textarea>
+                        <div class="flex flex-row gap-1">
+                          <input type="checkbox" id="check">
+                          <label for="check" class="hover:text-indigo-900 hover:font-semibold hover:underline"> 
+                            I have read and understand the privacy policy.</label>
+                    
+                        </div>
+                </div>
+                <div class="flex justify-center items-center">
+                  <button class="bg-indigo-900 py-3 px-16 w-fit text-xl font-semibold text-white">send</button>
+                </div>
+
+              </div>
+            </div>
+             </div>
+        </div>
+        <div class="flex flex-col gap-9 justify-center items-center  md:px-60 pt-10 mb-24 mt-20 bg-[url(../public/images/bg-pic.png)] " >
+          <div class="flex flex-col gap-9 justify-center items-center">
+            <h2 class="font-semibold text-3xl md:text-[40px] lg:text-[55px] text-indigo-900">Do you like our work?</h2>
+            <button class=" items-center  lg:p-5 hover:bg-white hover:text-indigo-900 bg-indigo-900 text-white font-semibold w-fit px-16 py-3 lg:text-xl">Shop Now</button> 
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+        <footer class="bg-indigo-900">
+           <div class=" text-white p-10 grid-cols-1 grid md:grid-cols-3 gap-10">
+            <div class="flex flex-col gap-8 font-semibold">
+              <div>
+                <a href="#"><img src="../public/images/flower1.png" alt="Flower logo" class="h-14"></a>
+              </div>
+                 <div class="flex flex-row gap-5 items-center ml-10">
+                  <span class="bi bi-facebook text-4xl mr-3"></span>
+                  <span class="bi bi-github text-4xl mr-3"></span>
+                  <span class="bi bi-linkedin text-4xl"></span>
+                 </div>
+            </div>
+            <div class="flex flex-col gap-3  ">
+                   <h2 class="text-xl "><span class="bi bi-clock text-2xl mr-2"></span>Opening Hours</h2>
+                   <p>Monday:       <span class="ml-3"> 8:45am – 7:30pm</span>  <span class="ml-5">Open on all Bank Holidays</span></p>
+
+                   <p>Tue to Sat:    <span class="ml-3"> 8:45am – 7:30pm</span> <span class="ml-5">except during Christmas and</span></p>
+                    
+                   <p>Sunday:        <span class="ml-3">11am – 6:30pm</span> <span class="ml-5">Easter.</span></p> 
+            </div>
+            <div class="flex flex-col gap-5">
+              <p><span class="bi bi-globe-central-south-asia text-2xl mr-2"></span>1st Ave, New York, NY 108</p>
+              <p ><span class="bi bi-telephone-fill text-2xl mr-2" ></span>+91 8018292928</p>
+              <p><span class="bi bi-envelope-fill text-2xl mr-2"></span>flowershop@example.com</p>
+             </div>
+           </div>
+           <div class="flex flex-col justify-center items-center mt-5 text-white">
+            <p> &copy;2023 Flower Shop All rights reserved</p>
+            <a href="#">Privacy Policy - Legal Notice</a>
+           </div>
+        </footer>
+        
+     
+
+<script src="./flower.js"></script>
+</body>
+</html>
